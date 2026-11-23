@@ -1,0 +1,26 @@
+{
+  "mcpServers": {
+    "home-assistant": {
+      "command": "node",
+      "args": [
+        "--no-warnings",
+        "/ABSOLUTE/PATH/TO/mcp-home-assistant/src/mcp_server.mjs"
+      ],
+      "env": {
+        "HA_URL": "http://homeassistant.local:8123",
+        "HA_TOKEN": "YOUR_LONG_LIVED_ACCESS_TOKEN"
+      }
+    },
+    "home-assistant-multi": {
+      "command": "node",
+      "args": [
+        "--no-warnings",
+        "/ABSOLUTE/PATH/TO/mcp-home-assistant/src/mcp_server.mjs"
+      ],
+      "env": {
+        "HA_INSTANCES_JSON": "{\"home\":{\"url\":\"http://homeassistant.local:8123\",\"token\":\"YOUR_HOME_TOKEN\"},\"office\":{\"url\":\"https://ha.example.com\",\"token\":\"YOUR_OFFICE_TOKEN\",\"aliases\":[\"work\"]}}",
+        "HA_DEFAULT_INSTANCE": "home"
+      }
+    }
+  }
+}

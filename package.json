@@ -1,0 +1,23 @@
+{
+  "name": "mcp-home-assistant",
+  "version": "1.3.0",
+  "description": "Model Context Protocol (MCP) server for one or more Home Assistant instances (states, services, history, templates, cameras, entity registry)",
+  "main": "src/mcp_server.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "node src/mcp_server.mjs",
+    "check": "node --check src/config.mjs && node --check src/camera_watches.mjs && node --check src/client.mjs && node --check src/mcp_server.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "home-assistant",
+    "mcp",
+    "model-context-protocol",
+    "iot",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC"
+}
